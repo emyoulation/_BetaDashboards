@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database PUBLIC "-//Gramps//DTD Gramps XML 1.7.1//EN"
+"http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
+<database xmlns="http://gramps-project.org/xml/1.7.1/">
+  <header>
+    <created date="2022-03-02" version="AIO64-5.1.5-1"/>
+    <researcher>
+      <resname>The Gramps Project</resname>
+      <resaddr>https://gramps.discourse.group</resaddr>
+    </researcher>
+  </header>
+  <events>
+    <event handle="_ef8fab0614449c61a0ca99e2a9f" change="1646255537" id="E0000000">
+      <type>Unknown</type>
+    </event>
+  </events>
+  <people home="_ef8f937ecc43833a1100699ec47">
+    <person handle="_ef8f937ecc43833a1100699ec47" change="1646252677" id="I0000000">
+      <gender>U</gender>
+      <name type="Birth Name">
+        <first>This person has not been named</first>
+        <surname>Unknown</surname>
+      </name>
+      <eventref hlink="_ef8fab0614449c61a0ca99e2a9f" role="Primary"/>
+      <parentin hlink="_ef8f947d5066daa2554ba6254d6"/>
+    </person>
+  </people>
+  <families>
+    <family handle="_ef8f947d5066daa2554ba6254d6" change="1646252677" id="F000000">
+      <rel type="Unknown"/>
+      <father hlink="_ef8f937ecc43833a1100699ec47"/>
+    </family>
+  </families>
+  <citations>
+    <citation handle="_ef8f9608601108448ed71849522" change="1646252677" id="C000000">
+      <page>GeoNames ID: 2648110</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+    <citation handle="_ef8f962105f6f8bc250bc3215a2" change="1646252677" id="C000001">
+      <page>GeoNames ID: 6269131</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+    <citation handle="_ef8f99639d44f257b01556bd502" change="1646252677" id="C000002">
+      <page>GeoNames ID: 6269131</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+    <citation handle="_ef8f99c2ff65c35d34ee2ef1645" change="1646252677" id="C000003">
+      <page>GeoNames ID: 2635167</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+    <citation handle="_ef8fb32343b4e3bef7e1543900d" change="1646252904" id="C000004">
+      <page>GeoNames ID: 6295636</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+    <citation handle="_ef8fb33e0685ec4de61f3c778ee" change="1646252915" id="C000005">
+      <page>GeoNames ID: 3333147</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ef8f9606f91757e9e231b4efe3"/>
+    </citation>
+  </citations>
+  <sources>
+    <source handle="_ef8f9606f91757e9e231b4efe3" change="1646252677" id="S000000">
+      <stitle>GeoNames</stitle>
+      <sauthor>Marc Wick</sauthor>
+      <reporef hlink="_ef8f9606f7c4c72cdcf4cc1de3d" medium="Electronic"/>
+    </source>
+  </sources>
+  <places>
+    <placeobj handle="_ef8f955920a168752a63ee0ff37" change="1646252677" id="GEO2648110" type="Region">
+      <pname value="Greater London" lang="en"/>
+      <coord long="-0.16667" lat="51.5"/>
+      <placeref hlink="_ef8f9605a0d2a89695ab048fb29"/>
+  <url  href="https://en.wikipedia.org/wiki/Greater_London" type="Web Home" description="https://en.wikipedia.org/wiki/Greater_London"/>
+      <citationref hlink="_ef8f9608601108448ed71849522"/>
+    </placeobj>
+    <placeobj handle="_ef8f9605a0d2a89695ab048fb29" change="1646255657" id="GEO6269131" type="Country">
+      <ptitle>England, United Kingdom</ptitle>
+      <pname value="England" lang="en"/>
+      <pname value="England"/>
+      <pname value="Anglia"/>
+      <pname value="ኢንግላንድ" lang="am"/>
+      <pname value="Anglaterra" lang="an"/>
+      <pname value="انجلترا" lang="arz"/>
+      <pname value="ইংলেণ্ড" lang="as"/>
+      <pname value="ইংল্যান্ড" lang="bn"/>
+      <pname value="England" lang="de"/>
+      <pname value="އިނގިރޭސިވިލާތް" lang="dv"/>
+      <pname value="Inglaterra" lang="es"/>
+      <pname value="Angleterre" lang="fr"/>
+      <pname value="Sasana" lang="ga"/>
+      <pname value="イングランド" lang="ja"/>
+      <pname value="អង់គ្លេស" lang="km"/>
+      <pname value="ಇಂಗ್ಲೆಂಡ್" lang="kn"/>
+      <pname value="잉글랜드" lang="ko"/>
+      <pname value="ປະເທດອັງກິດ" lang="lo"/>
+      <pname value="英格蘭" lang="lzh"/>
+      <pname value="ഇംഗ്ലണ്ട്" lang="ml"/>
+      <pname value="အင်္ဂလန်နိုင်ငံ" lang="my"/>
+      <pname value="ଇଂଲଣ୍ଡ" lang="or"/>
+      <pname value="ਇੰਗਲੈਂਡ" lang="pa"/>
+      <pname value="Inglaterra" lang="pam"/>
+      <pname value="Anglia" lang="pl"/>
+      <pname value="Anghiltèra" lang="pms"/>
+      <pname value="Енглеска" lang="sr"/>
+      <pname value="Uingereza" lang="sw"/>
+      <pname value="இங்கிலாந்து" lang="ta"/>
+      <pname value="ఇంగ్లాండు" lang="te"/>
+      <pname value="ประเทศอังกฤษ" lang="th"/>
+      <pname value="انگلستان" lang="ur"/>
+      <pname value="英格兰" lang="zh"/>
+      <coord long="-0.70312" lat="52.16045"/>
+      <placeref hlink="_ef8f961fb45126531e830659c4f"/>
+  <url  href="https://en.wikipedia.org/wiki/England" type="Web Home" description="https://en.wikipedia.org/wiki/England"/>
+      <citationref hlink="_ef8f99639d44f257b01556bd502"/>
+    </placeobj>
+    <placeobj handle="_ef8f961fb45126531e830659c4f" change="1646252677" id="GEO2635167" type="Country">
+      <ptitle>United Kingdom</ptitle>
+      <pname value="United Kingdom" lang="en"/>
+      <pname value="Britain" lang="en"/>
+      <pname value="Great Britain" lang="en"/>
+      <pname value="UK" lang="en"/>
+      <pname value="United Kingdom of Great Britain and Northern Ireland" lang="en"/>
+      <coord long="-2.69531" lat="54.75844"/>
+  <url  href="http://id.loc.gov/authorities/names/n79023147" type="Web Home" description="http://id.loc.gov/authorities/names/n79023147"/>
+  <url  href="https://en.wikipedia.org/wiki/United_Kingdom" type="Web Home" description="https://en.wikipedia.org/wiki/United_Kingdom"/>
+      <citationref hlink="_ef8f99c2ff65c35d34ee2ef1645"/>
+    </placeobj>
+    <placeobj handle="_ef8fb23ef70279cffb7b735dbf6" change="1646255566" id="GEO6295636" type="Building">
+      <pname value="Royal Observatory" lang="en"/>
+      <pname value="Royal Greenwich Observatory"/>
+      <pname value="Greenwich Observatory"/>
+      <coord long="-0.00041" lat="51.47687"/>
+      <placeref hlink="_ef8fb3220df144ed4ef50920996"/>
+  <url  href="https://en.wikipedia.org/wiki/Royal_Observatory%2C_Greenwich" type="Web Home" description="https://en.wikipedia.org/wiki/Royal_Observatory%2C_Greenwich"/>
+      <citationref hlink="_ef8fb32343b4e3bef7e1543900d"/>
+    </placeobj>
+    <placeobj handle="_ef8fb3220df144ed4ef50920996" change="1646255610" id="GEO3333147" type="Borough">
+      <ptitle>Greenwich, Greater London, England, United Kingdom</ptitle>
+      <pname value="Greenwich" lang="en"/>
+      <pname value="Greenwich"/>
+      <pname value="GRE" lang="abbr"/>
+      <pname value="London Borough of Greenwich" lang="en"/>
+      <coord long="0.05" lat="51.45"/>
+      <placeref hlink="_ef8f955920a168752a63ee0ff37"/>
+  <url  href="http://id.loc.gov/authorities/names/n80002421" type="Web Home" description="http://id.loc.gov/authorities/names/n80002421"/>
+  <url  href="https://en.wikipedia.org/wiki/Greenwich" type="Web Home" description="https://en.wikipedia.org/wiki/Greenwich"/>
+      <citationref hlink="_ef8fb33e0685ec4de61f3c778ee"/>
+    </placeobj>
+  </places>
+  <repositories>
+    <repository handle="_ef8f9606f7c4c72cdcf4cc1de3d" change="1646252677" id="R0000">
+      <rname>www.geonames.org</rname>
+      <type>Web site</type>
+      <url  href="http://www.geonames.org/" type="Web Home" description="GeoNames web site"/>
+      <url  href="marc@geonames.org" type="E-mail" description="GeoNames author"/>
+      <noteref hlink="_ef8f9606f5e261425e0328b928b"/>
+    </repository>
+  </repositories>
+  <notes>
+    <note handle="_ef8f8d1e2466f1774541289ef80" change="1646255359" id="N000000" type="To Do">
+      <text>Introduction
+
+Gramps is a software package designed for genealogical research. While similar to other genealogical programs, Gramps offers some unique and powerful features. Gramps does not enforce a particular genealogical &quot;best practice&quot; on researchers. There are often several ways to do any task... so Gramps tries to be flexible and conform to your style of research.
+
+Since Gramps is &quot;Free and Open Source Software&quot;, you are invited to modify Gramps to more closely suit your purposes. We just ask that you share any improvements so they can inspire the entire community! Another aspect of an Open Source Software package, is that you are free to make copies and distribute it to anyone you wish.
+
+  • Learn more about Gramps by visting the Gramps Project website.
+
+Who makes Gramps?
+
+Gramps is created by genealogists for genealogists, organized in the Gramps Project.
+
+It is developed and maintained by a worldwide team of volunteers whose goal is to make Gramps powerful, yet easy to use. (You have a standing invitation to join as one of those volunteers!)
+
+There is an active community of user volunteers available on the mailing lists and Discourse forum to answer questions, share ideas and techniques.
+
+  • Explore the Gramps online manual
+  • Ask questions on the gramps-users mailing list
+  • Share knowledge on the Gramps Discourse Forum
+
+Getting Started
+
+The first time Gramps is started, most of the Views will be blank. There will be very few menu or toolbar options. Gramps needs a Tree with People before more menu and toolbar options appear.
+
+This is because options are offered on a contextual basis. (If an option does not apply to what is displayed or selected, that option is not actively displayed.) The basic context of a Family Tree is needed for any activity to happen. Family Trees are your &quot;blank document&quot; or &quot;new project&quot; workspaces.
+
+To create a new Family Tree (sometimes called a 'database'), select &quot;Family Trees&quot; menu, pick the &quot;Manage Family Trees...&quot; option, press the &quot;New&quot; button, and name your Family Tree. Then click the &quot;Load Family Tree&quot; button to make the selected tree active and ready to accept genealogical research data.
+
+If you are just exploring, scroll down to bottom of this text and learn about importing the example Tree that is included with Gramps. Make any &quot;beginner mistakes&quot; there instead in your research. After a bit of exploring, you will be ready to begin entering your first family, or importing a genealogy file. For one strategy for filling in the Tree, please read the information at the links below.
+  • Start with Genealogy and Gramps
+  • Discourse forum list of Gramps tutorial videos
+
+Enter your first Family
+
+Switch to the &quot;Relationships&quot; view and, from the &quot;Add&quot; menu, select the &quot;Family&quot; to bring up the &quot;Edit Family&quot; window. Here you can click the [+] icon beside the &quot;Father/partner1&quot; or &quot;Mother/partner2&quot; to begin entering that person. Start with just the basic Name information for one person. (We'll come back to add Birth and Death data later.) Clicking the &quot;OK&quot; stores the record, creating your first Person. You can add an immediate relative in one of the other spots or Click the &quot;OK&quot; button to store that first family.
+
+This establishes a starting point for your tree. With the context of this first person and family, all of the menu options and toolbar icon functions will have become available. Spend some time moving your mouse over the icons. As your cursor passes over an icon, a hint message will appear telling you the icon's function. The same hint system is useful for exploring any of the edit windows. Moving the mouse cursor over an item will tell you what that control will do.
+
+You can now expand families by adding parents, a spouse and children. Under the tabs of the lower section of the Edit windows, the [+] icon under the Events tab allows adding landmark life occasions (with dates and places) to People and Families. Under the other tabs, you can add Sources, Citations, Notes and other types of information to provide documentation for your entries.
+
+As you start using Gramps, you will find that information can be entered from all the various Views. There are multiple ways of doing most activities in Gramps. The flexibility allows you to choose which fits your work style.
+  • Entering and editing data (a brief overview)
+
+Importing a Family Tree
+
+To import a Family Tree from another program, first create a GEDCOM (or other data exchange format) file from your previous program.
+
+Create a new, blank Gramps database (Tree) file as described in the &quot;Getting Started&quot; section above. Then use the &quot;Import&quot; option under the &quot;Family Trees&quot; menu to import the GEDCOM data.
+  • Import from another genealogy program
+
+Dashboard View
+
+You are currently reading from the &quot;Dashboard&quot; view, where you can add your own gramplets. You can also add gramplets to any view by adding a sidebar and/or bottombar, and right-clicking to the right of the tab.
+
+The Configure... option in the View menu (or clicking the icon in the toolbar) opens the &quot;Gramplet Layout&quot; tab. This allows you to subdivide the dashboard into more or fewer columns. You can also drag the Properties button to reposition the gramplet within this dashboard or click to detach the gramplet to float above Gramps or place on a second monitor.
+
+While the Dashboard view is about using Gramps more efficiently, the other view categories allow data entry and understanding of how your data interconnects.
+  • Gramps View Categories
+
+Addons and &quot;Gramplets&quot;
+
+There many Addons that are available to assist you in data entry and visualizing your family tree. These addons provide reports, filter rules, View modes, &quot;Gramplets&quot;, and more.
+
+Many of these addon tools are already distributed with the basic installation of Gramps. Many more are freely available to download and install.
+  • List of Addons and &quot;Gramplets&quot;
+
+Example Database
+
+Want to see Gramps in use? There is a demonstration database that was used to illustrate the documentation. You can create a blank tree and then import that Example database.
+
+Create a new Family Tree as described in the &quot;Getting Started&quot; section above. (A good name for that Family Tree would be “EXAMPLE”.)
+
+Import the example.gramps Gramps archive file. (The webpage below describes what is in that archive and the file location for the different Operation Systems that run the Gramps program. It also describes where the file is available on the web.
+  • Example.gramps
+</text>
+      <style name="bold">
+        <range start="0" end="12"/>
+        <range start="772" end="789"/>
+        <range start="1356" end="1371"/>
+        <range start="2661" end="2684"/>
+        <range start="4340" end="4363"/>
+        <range start="4729" end="4743"/>
+        <range start="5501" end="5523"/>
+        <range start="5885" end="5901"/>
+      </style>
+      <style name="italic">
+        <range start="225" end="238"/>
+        <range start="391" end="420"/>
+      </style>
+      <style name="link" value="httphttps://gramps-project.org/wiki/index.php?title=Gramps_5.1_Wiki_Manual_-_Entering_and_editing_data:_brief">
+        <range start="4294" end="4338"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/">
+        <range start="708" end="770"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/introduction-WP/contact/">
+        <range start="1258" end="1304"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=5.1_Addons">
+        <range start="5853" end="5883"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=Example.gramps">
+        <range start="6462" end="6476"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=Gramps_5.1_Wiki_Manual">
+        <range start="1221" end="1253"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=Gramps_5.1_Wiki_Manual_-_Categories">
+        <range start="5477" end="5499"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=Import_from_another_genealogy_program">
+        <range start="4690" end="4727"/>
+      </style>
+      <style name="link" value="https://gramps-project.org/wiki/index.php?title=Start_with_Genealogy">
+        <range start="2577" end="2608"/>
+      </style>
+      <style name="link" value="https://gramps.discourse.group/">
+        <range start="1309" end="1354"/>
+      </style>
+      <style name="link" value="https://gramps.discourse.group/t/tutorial-videos/126">
+        <range start="2613" end="2659"/>
+      </style>
+    </note>
+    <note handle="_ef8f9606f5e261425e0328b928b" change="1646252677" id="N000001" type="Repository Note">
+      <text>GeoNames was founded by Marc Wick. You can reach him at marc@geonames.org
+GeoNames is a project of Unxos GmbH, Weingartenstrasse 8, 8708 Männedorf, Switzerland.
+This work is licensed under a Creative Commons Attribution 3.0 License</text>
+      <style name="link" value="https://creativecommons.org/licenses/by/3.0/legalcode">
+        <range start="191" end="231"/>
+      </style>
+    </note>
+  </notes>
+</database>
