@@ -8,7 +8,7 @@ The Welcome! is being updated but the proposed new instructions are still too ge
 A better set might be revisions of the "What's Next?", "To Do" and a more adaptive "Welcome to Gramps!"
 ![image](https://user-images.githubusercontent.com/69127217/199577268-d7f33faf-f564-4326-be9d-4bc3daa4da32.png)
 
-The **Welcome to Gramps!** has had significant text changes and padding added to make lookore finished. But the process showed that a hard-coded text layout interferes with writing good content.  This Gramplet should be displaying a README.md file or Note that has provision for multiple languages.
+The **Welcome to Gramps!** has had significant text changes and padding added to make look more finished. But the process showed that a hard-coded text layout interferes with writing good content.  This Gramplet should be displaying a README.md file or Note that has provision for multiple languages.
 
 The **To Do** Gramplet is mostly about having a communication channel from the Tree. It is unclear how this Gramplet determine which To Do note to display. So I duplicated the content of the one selected into a new note and replaced it in the Referenceing objects. Then highjacked the original note so that it describes the purpose of the Tree.
 
