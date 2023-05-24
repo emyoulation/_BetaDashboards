@@ -99,7 +99,7 @@ register(GRAMPLET,
          expand=True,
          gramplet='BetaWhatNextGramplet',
          gramplet_title=_("Beta What's Next?"),
-         version="0.1.0",
+         version="0.1.1",
          help_url="Gramps_5.1_Wiki_Manual_-_Gramplets#What\'s_Next",
          gramps_target_version=MODULE_VERSION,
          )
