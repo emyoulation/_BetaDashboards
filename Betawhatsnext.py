@@ -2,7 +2,7 @@
 #
 # Gramps - a GTK+/GNOME based genealogy program - What Next Gramplet plugin
 #
-# Copyright (C) 2008 Reinhard Mueller  
+# Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
 # Copyright (C) 2022       Brian McCullough
 #
@@ -26,6 +26,7 @@
 # Gramps modules
 #
 # ------------------------------------------------------------------------
+from gi.repository import Gtk
 from gramps.gen.lib import EventType, FamilyRelType
 from gramps.gen.plug import Gramplet
 from gramps.gen.display.name import displayer as name_displayer
@@ -46,7 +47,12 @@ class BetaWhatNextGramplet(Gramplet):
     def init(self):
 
         self.set_tooltip(_("Double-click name for details"))
-        self.set_text(_("No Family Tree loaded."))
+        self.set_text(_("\n⛔ A local Genealogical Tree database has not yet been"
+                            " loaded. \n\nFrom the \"Family Trees\" menu, use the "
+                            " \"Manage Family Trees...\" option to"
+                            " create a New (or to load an existing) Tree database."
+                            "\n\nAn empty new tree is also used to receive a backup or"
+                            " imported data."))
 
     def build_options(self):
         """
@@ -162,24 +168,31 @@ class BetaWhatNextGramplet(Gramplet):
         self.connect(self.dbstate.db, 'family-update', self.update)
 
     def main(self):
-
+        self.label = Gtk.Label()
+        self.label.set_text("")
+        self.label.set_margin_left(2)
+        self.label.set_margin_right(2)
         # Fail gracefully if no database is loaded; warn or no entry ⚠ ☡ ⛔ 🚫 🛑 🚧 🚨
         if not self.dbstate.db.is_open():
-            self.set_text(_("\n⛔ A local Genealogical Tree database has not yet been"
+            self.label.set_text(_("\n⛔ A local Genealogical Tree database has not yet been"
                             " loaded. \n\nFrom the \"Family Trees\" menu, use the "
                             " \"Manage Family Trees...\" option to"
                             " create a New (or to load an existing) Tree database."
                             "\n\nAn empty new tree is also used to receive a backup or"
                             " imported data."))
+            # self.add(self.label)
             return
 
 # complain if database is empty
         people = self.dbstate.db.get_number_of_people()
         if not people:
+            # Set padding/margin
+
             self.set_text(_("\n⛔ The current Tree database contains no people."
-                            "\n\nAdd a Person or Import People from an external file."
-                            "\n\n  • Persons may be added via the \"Add\" menu."
-                            "\n  • An external file may be imported via the \"Family Trees\""
+                            "\n\nAdd a Family or Import People from an external file."
+                            "\n\n  • A Family may be added via the \"Add\" menu, then add a"
+                            " person by pressing the \"+\" (plus) in the spouse or children section."
+                           "\n  • An external file may be imported via the \"Family Trees\""
 							" menu."
                             "\n\nAfter adding at least 1 person, go to the People view, then"
                             " select someone to make them the \"Active Person\", and set"
