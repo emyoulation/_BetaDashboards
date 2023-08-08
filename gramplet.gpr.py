@@ -111,6 +111,6 @@ register(GRAMPLET,
          gramplet='BetaWhatNextGramplet',
          gramplet_title=_("Beta What's Next?"),
          version="0.1.2",
-         help_url="Gramps_5.1_Wiki_Manual_-_Gramplets#What\'s_Next",
+         help_url="https://github.com/emyoulation/_BetaDashboards/blob/5.2/README.md",
          gramps_target_version=MODULE_VERSION,
          )
