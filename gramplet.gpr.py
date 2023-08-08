@@ -110,7 +110,7 @@ register(GRAMPLET,
          expand=True,
          gramplet='BetaWhatNextGramplet',
          gramplet_title=_("Beta What's Next?"),
-         version="0.1.2",
+         version="0.1.3",
          help_url="https://github.com/emyoulation/_BetaDashboards/blob/5.2/README.md",
          gramps_target_version=MODULE_VERSION,
          )
