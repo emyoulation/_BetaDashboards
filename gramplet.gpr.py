@@ -5,7 +5,7 @@
 # Copyright (C) 2009 Benny Malengier
 # Copyright (C) 2011 Nick Hall
 # Copyright (C) 2011 Tim G L Lyons
-# Copyright (C) 2022 Brian McCullough
+# Copyright (C) 2023 Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-from gramps.gen.plug._pluginreg import register, STABLE, UNSTABLE, GRAMPLET
+from gramps.gen.plug._pluginreg import register, STABLE, BETA, EXPERIMENTAL, UNSTABLE, DEVELOPER, GRAMPLET
 from gramps.gen.const import GRAMPS_LOCALE as glocale
 _ = glocale.translation.gettext
 
@@ -50,7 +50,7 @@ register(GRAMPLET,
          gramps_target_version=MODULE_VERSION,
          status=STABLE,
          audience=EVERYONE,
-         maintainers="Brian McCullough", 
+         maintainers="Brian McCullough",
          maintainers_email="emyoulation@yahoo.com",
          fname="Betatodo.py",
          height=200,
@@ -60,14 +60,14 @@ register(GRAMPLET,
          help_url="Gramps_5.1_Wiki_Manual_-_Gramplets#Person_To_Do",
          navtypes=["Person"],
          )
-		 
+
 register(GRAMPLET,
          id="Beta To Do",
          name=_("Beta To Do"),
          description=_("Beta Gramplet for displaying a To Do list"),
          status=EXPERIMENTAL,
          audience=EXPERT,
-         maintainers="Brian McCullough", 
+         maintainers="Brian McCullough",
          maintainers_email="emyoulation@yahoo.com",
          fname="Betatodogramplet.py",
          height=300,
@@ -85,8 +85,8 @@ register(GRAMPLET,
          name=_("Beta Welcome"),
          description=_("Beta Gramplet showing a welcome message"),
          status=BETA,
-         audience=Everyone,
-         maintainers="Brian McCullough", 
+         audience=EVERYONE,
+         maintainers="Brian McCullough",
          maintainers_email="emyoulation@yahoo.com",
          fname="Betawelcomegramplet.py",
          height=300,
@@ -103,8 +103,8 @@ register(GRAMPLET,
          name=_("Beta What's Next"),
          description=_("Beta Gramplet suggesting items to research"),
          status=STABLE,
-         audience=Everyone,
-         maintainers="Brian McCullough", 
+         audience=EVERYONE,
+         maintainers="Brian McCullough",
          maintainers_email="emyoulation@yahoo.com",
          fname="Betawhatsnext.py",
          height=230,
