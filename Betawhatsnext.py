@@ -1,15 +1,15 @@
 # encoding: utf-8
 #
-# Gramps - a GTK+/GNOME based genealogy program - What Next Gramplet plugin
-#
+# "What's Next?" Gramplet, a modular plugin for Gramps 
+# (Gramps - the genealogy software suite built on GTK+/GNOME) 
+# 
 # Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
 # Copyright (C) 2022       Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
+# it under the terms of version 2 of the GNU General Public License as 
+# published by the Free Software Foundation.
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -20,6 +20,8 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
+# For the Gramps-Project volunteer community's contact information, visit:
+# https://gramps-project.org/wiki/index.php/Contact
 
 # ------------------------------------------------------------------------
 #
