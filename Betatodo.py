@@ -1,9 +1,10 @@
 # "To Do" Gramplet, a modular plugin for Gramps 
 # (Gramps - the genealogy software suite built on GTK+/GNOME) 
-#
-# Copyright (C) 2013 Nick Hall
-# Copyright (C) 2022 Brian McCullough
 # 
+# Copyright (C) 2008 Reinhard Mueller
+# Copyright (C) 2010       Jakim Friant
+# Copyright (C) 2022       Brian McCullough
+#
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of version 2 of the GNU General Public License as 
 # published by the Free Software Foundation.
