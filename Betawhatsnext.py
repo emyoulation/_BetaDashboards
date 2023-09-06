@@ -22,7 +22,6 @@
 #
 # For the Gramps-Project volunteer community's contact information, visit:
 # https://gramps-project.org/wiki/index.php/Contact
-#
 
 # ------------------------------------------------------------------------
 #
