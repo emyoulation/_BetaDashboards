@@ -1,14 +1,14 @@
 # encoding: utf-8
 #
-# "What's Next?" Gramplet, a modular plugin for Gramps 
-# (Gramps - the genealogy software suite built on GTK+/GNOME) 
-# 
+# "What's Next?" Gramplet, a modular plugin for Gramps
+# (Gramps - the genealogy software suite built on GTK+/GNOME)
+#
 # Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
-# Copyright (C) 2022       Brian McCullough
+# Copyright (C) 2023       Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of version 2 of the GNU General Public License as 
+# it under the terms of version 2 of the GNU General Public License as
 # published by the Free Software Foundation.
 #
 # This program is distributed in the hope that it will be useful,
@@ -37,6 +37,15 @@ from gramps.gen.plug.report import utils
 from gramps.gen.const import GRAMPS_LOCALE as glocale
 _ = glocale.translation.sgettext
 
+initial_message = _("\n⛔ A local Genealogical Tree database has not yet been"
+                    " loaded."
+                    "\n\n👣 Next Steps:"
+                    "\nFrom the \"Family Trees\" menu,"
+                    " use the \"Manage Family Trees...\" option to"
+                    " create a New (or to load an existing) Tree database."
+                    "\n\nAn empty new tree is also used to receive a backup or"
+                    " imported data.")
+
 # ------------------------------------------------------------------------
 #
 # The Gramplet
@@ -49,12 +58,7 @@ class BetaWhatNextGramplet(Gramplet):
     def init(self):
 
         self.set_tooltip(_("Double-click name for details"))
-        self.set_text(_("\n⛔ A local Genealogical Tree database has not yet been"
-                            " loaded. \n\nFrom the \"Family Trees\" menu, use the "
-                            " \"Manage Family Trees...\" option to"
-                            " create a New (or to load an existing) Tree database."
-                            "\n\nAn empty new tree is also used to receive a backup or"
-                            " imported data."))
+        self.set_text(initial_message)
 
     def build_options(self):
         """
@@ -169,19 +173,19 @@ class BetaWhatNextGramplet(Gramplet):
         self.connect(self.dbstate.db, 'family-delete', self.update)
         self.connect(self.dbstate.db, 'family-update', self.update)
 
+    def _no_db(self):
+        super()._no_db()
+#        print("No database open at this point")
+        self.set_text(initial_message)
+
     def main(self):
         self.label = Gtk.Label()
         self.label.set_text("")
         self.label.set_margin_left(2)
         self.label.set_margin_right(2)
-        # Fail gracefully if no database is loaded; warn or no entry ⚠ ☡ ⛔ 🚫 🛑 🚧 🚨
+        # Fail gracefully if no database is loaded; warn or no entry ⚠ ☡ ⛔ 🚫 🛑 🚧 🚨 👣
         if not self.dbstate.db.is_open():
-            self.label.set_text(_("\n⛔ A local Genealogical Tree database has not yet been"
-                            " loaded. \n\nFrom the \"Family Trees\" menu, use the "
-                            " \"Manage Family Trees...\" option to"
-                            " create a New (or to load an existing) Tree database."
-                            "\n\nAn empty new tree is also used to receive a backup or"
-                            " imported data."))
+            self.label.set_text(initial_message)
             # self.add(self.label)
             return
 
@@ -191,11 +195,12 @@ class BetaWhatNextGramplet(Gramplet):
             # Set padding/margin
 
             self.set_text(_("\n⛔ The current Tree database contains no people."
-                            "\n\nAdd a Family or Import People from an external file."
+                            "\n\n👣 Next Steps:"
+                            "\nAdd a Family or Import People from an external file."
                             "\n\n  • A Family may be added via the \"Add\" menu, then add a"
                             " person by pressing the \"+\" (plus) in the spouse or children section."
-                           "\n  • An external file may be imported via the \"Family Trees\""
-							" menu."
+                            "\n  • An external file may be imported via the \"Family Trees\""
+                            " menu."
                             "\n\nAfter adding at least 1 person, go to the People view, then"
                             " select someone to make them the \"Active Person\", and set"
                             " them as the focal \"Home Person\" via the Edit menu."))
@@ -213,7 +218,8 @@ class BetaWhatNextGramplet(Gramplet):
         default_person = self.dbstate.db.get_default_person()
         if default_person is None:
             self.set_text(_("\n⛔ No Person has been set as the focal Home Person."
-                            "\n\nIn the People view,"
+                            "\n\n👣 Next Steps:"
+                            "\nIn the People view,"
                             " select someone to make them the \"Active Person\", and set"
                             " them as the focal \"Home Person\" via the Edit menu."))
             return
