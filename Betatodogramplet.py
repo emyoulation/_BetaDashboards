@@ -1,12 +1,13 @@
-# "To Do" Gramplet, a modular plugin for Gramps 
-# (Gramps - the genealogy software suite built on GTK+/GNOME) 
-# 
+
+# "To Do" Gramplet, a modular plugin for Gramps
+# (Gramps - the genealogy software suite built on GTK+/GNOME)
+#
 # Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
-# Copyright (C) 2022       Brian McCullough
+# Copyright (C) 2024       Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of version 2 of the GNU General Public License as 
+# it under the terms of version 2 of the GNU General Public License as
 # published by the Free Software Foundation.
 #
 # This program is distributed in the hope that it will be useful,
@@ -52,6 +53,7 @@ class BetaToDoGramplet(Gramplet):
         self.gui.get_container_widget().remove(self.gui.textview)
         self.gui.get_container_widget().add(self.gui.WIDGET)
         self.gui.WIDGET.show()
+
 
     def build_gui(self):
         """
@@ -214,6 +216,13 @@ class BetaToDoGramplet(Gramplet):
         self.set_has_data(self.get_has_data())
 
     def db_changed(self):
+#        Update the GUI when notes in the database are changed
         self.connect(self.dbstate.db, 'note-add', self.update)
         self.connect(self.dbstate.db, 'note-delete', self.update)
         self.connect(self.dbstate.db, 'note-update', self.update)
+        self.connect(self.dbstate.db, 'note-rebuild', self.update)
+#        Connect the db_changed method to the database-changed signal
+#        self.dbstate.db.connect("database-changed", self.db_changed)
+#        self.dbstate.db.connect("transaction-begun", self.db_changed)
+        self.dbstate.db.connect("transaction-committed", self.db_changed)
+#        self.dbstate.db.connect("transaction-rollback", self.db_changed)
