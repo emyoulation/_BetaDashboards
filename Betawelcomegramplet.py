@@ -1,12 +1,12 @@
-# "Welcome to Gramps!" Gramplet, a modular plugin for Gramps 
-# (Gramps - the genealogy software suite built on GTK+/GNOME) 
-# 
+# "Welcome to Gramps!" Gramplet, a modular plugin for Gramps
+# (Gramps - the genealogy software suite built on GTK+/GNOME)
+#
 # Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
-# Copyright (C) 2022       Brian McCullough
+# Copyright (C) 2024       Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
-# it under the terms of version 2 of the GNU General Public License as 
+# it under the terms of version 2 of the GNU General Public License as
 # published by the Free Software Foundation.
 #
 # This program is distributed in the hope that it will be useful,
@@ -179,7 +179,7 @@ class BetaWelcomeGramplet(Gramplet):
         welcome += _(
             'There are several Views in Gramps that display lists of the database components. "People", "Families", "Events", "Places", "Media", "Notes", "Citations", "Sources" and "Repositories".\n\n')
         welcome += _(
-            'There are views that display how People and Families interrelate. Rather than tabular lists, the "Relationships” and "Charts" view diagram the connections.  And view modes like the Charts\' "Pedigree" and "Fan Chart" offer different diagrams of similar information.\n')	
+            'There are views that display how People and Families interrelate. Rather than tabular lists, the "Relationships” and "Charts" view diagram the connections.  And view modes like the Charts\' "Pedigree" and "Fan Chart" offer different diagrams of similar information.\n')
         welcome += linkst(_('Gramps View Categories'), wiki('_-_Categories', manual=True)) + '\n\n'
         welcome += boldst(_('Addons and "Gramplets"')) + '\n\n' + _(
             'There many Addons that are available to assist you in data entry and visualizing your family tree. These addons provide reports, filter rules, View modes, "Gramplets", and more.\n\n')
