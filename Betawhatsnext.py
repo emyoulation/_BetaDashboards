@@ -5,7 +5,7 @@
 #
 # Copyright (C) 2008 Reinhard Mueller
 # Copyright (C) 2010       Jakim Friant
-# Copyright (C) 2023       Brian McCullough
+# Copyright (C) 2024       Brian McCullough
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of version 2 of the GNU General Public License as
@@ -37,14 +37,16 @@ from gramps.gen.plug.report import utils
 from gramps.gen.const import GRAMPS_LOCALE as glocale
 _ = glocale.translation.sgettext
 
-initial_message = _("\n⛔ A local Genealogical Tree database has not yet been"
-                    " loaded."
-                    "\n\n👣 Next Steps:"
-                    "\nFrom the \"Family Trees\" menu,"
-                    " use the \"Manage Family Trees...\" option to"
-                    " create a New (or to load an existing) Tree database."
-                    "\n\nAn empty new tree is also used to receive a backup or"
-                    " imported data.")
+# initial_message = _("\n⛔ A local Genealogical Tree database has not been"
+initial_message = _(" ⛔ A local Genealogical Tree database has not been"
+        " loaded yet."
+        "\n\n 👣 Next Steps:"
+        "\nFrom the \"Family Trees\" menu, use the"
+        " \"Manage Family Trees...\" option to create and name a New (or"
+        " to select an existing) Tree and then load that database "
+        " with the \"Load Family Tree\" button."
+        "\n\nAn empty new tree is also used to import a backup or"
+        " migrate data via a GEDCOM (or other transfer format) file.")
 
 # ------------------------------------------------------------------------
 #
@@ -169,9 +171,15 @@ class BetaWhatNextGramplet(Gramplet):
         self.connect(self.dbstate.db, 'person-add', self.update)
         self.connect(self.dbstate.db, 'person-delete', self.update)
         self.connect(self.dbstate.db, 'person-update', self.update)
+        self.connect(self.dbstate.db, 'person-rebuild', self.update)
         self.connect(self.dbstate.db, 'family-add', self.update)
         self.connect(self.dbstate.db, 'family-delete', self.update)
         self.connect(self.dbstate.db, 'family-update', self.update)
+        self.connect(self.dbstate.db, 'family-rebuild', self.update)
+        self.connect(self.dbstate.db, 'event-add', self.update)
+        self.connect(self.dbstate.db, 'event-delete', self.update)
+        self.connect(self.dbstate.db, 'event-update', self.update)
+        self.connect(self.dbstate.db, 'event-rebuild', self.update)
 
     def _no_db(self):
         super()._no_db()
@@ -194,34 +202,35 @@ class BetaWhatNextGramplet(Gramplet):
         if not people:
             # Set padding/margin
 
-            self.set_text(_("\n⛔ The current Tree database contains no people."
-                            "\n\n👣 Next Steps:"
-                            "\nAdd a Family or Import People from an external file."
-                            "\n\n  • A Family may be added via the \"Add\" menu, then add a"
-                            " person by pressing the \"+\" (plus) in the spouse or children section."
-                            "\n  • An external file may be imported via the \"Family Trees\""
-                            " menu."
-                            "\n\nAfter adding at least 1 person, go to the People view, then"
-                            " select someone to make them the \"Active Person\", and set"
-                            " them as the focal \"Home Person\" via the Edit menu."))
+            self.set_text(_(" ⛔ The current Tree database contains no people."
+                "\n\n 👣 Next Steps:"
+                "\nAdd a Family or Import People from an external file."
+                "\n\n  • A Family may be added via the \"Add\" menu, then add a"
+                " person by pressing the \"+\" (plus) in the spouse or children section."
+                "\n  • An external file may be imported via the \"Family Trees\""
+                " menu."
+                "\n\nAfter adding at least 1 person, go to the People view, then"
+                " select someone to make them the \"Active Person\", and make them"
+                " the focal person with the \"Set Home Person\" via the Edit menu."))
             return
 
-# complain if no Active Person  - not critical. Gramplet focus is on Home Person
+# complain if no Active Person  - Jan 2023 not working but not critical. Gramplet focus is on Home Person
 #        active_person = self.dbstate.get_active("Person")
-#        if active_person:  # will be empty string in none active, else person handle  len(active_person) == 0:
-#           self.set_text(_("\nThere is currently no person selected to be the Active Person."
-#                           "\n\nGo to the People view, then clicking a row will"
-#                           " select someone to make them the \"Active Person\"."))
-#           return
+#        if active_person is None:  # will be empty string in none active, else person handle  len(active_person) == 0:
+#            self.set_text(_(" ⛔ There is currently no person selected to be the Active Person."
+#                           "\n\n 👣 Next Steps:"
+#                           "\n\nGo to the People view, then click a row to"
+#                           " select someone and make them the \"Active Person\"."))
+#            return
 
 # complain if no Home Person
         default_person = self.dbstate.db.get_default_person()
         if default_person is None:
-            self.set_text(_("\n⛔ No Person has been set as the focal Home Person."
-                            "\n\n👣 Next Steps:"
-                            "\nIn the People view,"
-                            " select someone to make them the \"Active Person\", and set"
-                            " them as the focal \"Home Person\" via the Edit menu."))
+            self.set_text(_(" ⛔ No Person has been set as the focal Home Person."
+                "\n\n 👣 Next Steps:"
+                "\nIn the People view,"
+                " select someone to make them the \"Active Person\", and make them"
+                " the focal person with the \"Set Home Person\" via the Edit menu."))
             return
 
         self.__person_complete_handle = None
